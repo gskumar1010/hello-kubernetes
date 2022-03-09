@@ -1,7 +1,7 @@
 FROM golang:1.15.2-alpine3.12 AS builder
 WORKDIR /build
 RUN apk add --update --no-cache git ca-certificates build-base
-RUN go get -u github.com/markbates/pkger
+RUN go get -u github.com/markbates/pkger/cmd/pkger
 COPY go.mod .
 COPY go.sum .
 RUN go mod download -x
