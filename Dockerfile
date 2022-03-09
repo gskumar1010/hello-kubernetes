@@ -6,7 +6,7 @@ COPY go.mod .
 COPY go.sum .
 RUN go mod download -x
 COPY . .
-RUN packr2
+RUN pkger
 RUN go build -o main
 
 FROM alpine:3.12
